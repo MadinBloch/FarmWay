@@ -21,7 +21,7 @@ npm -v
 1. **Clone or open the project**
 
    ```bash
-   cd Farmar-Project
+   cd Farmway-Project
    ```
 
 2. **Install dependencies**
@@ -70,7 +70,7 @@ Choose a role from the opening screen:
 ## Project structure
 
 ```
-Farmar-Project/
+Farmway-Project/
 ├── SIH_PLAN.md      # SIH26132 build plan, demo script, phases
 ├── AI_CONTEXT.md    # Architecture + ENR + API map for builders/agents
 ├── guide.md         # Product purpose (short)
