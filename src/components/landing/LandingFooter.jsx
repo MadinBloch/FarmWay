@@ -4,7 +4,7 @@ export default function LandingFooter({ footerText, onRegister }) {
       <div className="relative mx-auto grid max-w-5xl gap-8 px-5 py-10 sm:px-6 lg:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <a href="#top" className="inline-block">
-            <span className="text-2xl font-bold tracking-tight text-white">Farmly</span>
+            <span className="text-2xl font-bold tracking-tight text-white">Farmway</span>
             <small className="mt-1 block text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-farm-gold/90">
               Market linkages
             </small>
@@ -42,7 +42,7 @@ export default function LandingFooter({ footerText, onRegister }) {
 
       <div className="relative border-t border-white/8">
         <div className="mx-auto flex max-w-5xl flex-col gap-1 px-5 py-3 text-[0.7rem] text-white/40 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <span>© 2026 Farmly · SIH26132 prototype</span>
+          <span>© 2026 Farmway · SIH26132 prototype</span>
           <span>Transparent farm-gate to buyer trade</span>
         </div>
       </div>

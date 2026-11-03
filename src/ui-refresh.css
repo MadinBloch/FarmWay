@@ -10,38 +10,38 @@
    ========================================================= */
 
 :root {
-  --farmly-green: #176b45;
-  --farmly-green-dark: #0d3d2b;
-  --farmly-green-soft: #4caf50;
+  --farmway-green: #176b45;
+  --farmway-green-dark: #0d3d2b;
+  --farmway-green-soft: #4caf50;
 
-  --farmly-gold: #b77a25;
-  --farmly-gold-bright: #e7a928;
+  --farmway-gold: #b77a25;
+  --farmway-gold-bright: #e7a928;
 
-  --farmly-paper: #f7f9f4;
-  --farmly-white: #ffffff;
+  --farmway-paper: #f7f9f4;
+  --farmway-white: #ffffff;
 
-  --farmly-ink: #1f2933;
-  --farmly-muted: #64756d;
+  --farmway-ink: #1f2933;
+  --farmway-muted: #64756d;
 
-  --farmly-line: #dce3dd;
+  --farmway-line: #dce3dd;
 
-  --farmly-card:
+  --farmway-card:
     linear-gradient(
       145deg,
       rgba(255, 255, 255, 0.96),
       rgba(246, 248, 243, 0.9)
     );
 
-  --farmly-shadow-sm:
+  --farmway-shadow-sm:
     0 4px 16px rgba(13, 61, 43, 0.07);
 
-  --farmly-shadow-md:
+  --farmway-shadow-md:
     0 14px 38px rgba(13, 61, 43, 0.12);
 
-  --farmly-shadow-lg:
+  --farmway-shadow-lg:
     0 24px 70px rgba(13, 61, 43, 0.16);
 
-  --farmly-ease:
+  --farmway-ease:
     cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -56,7 +56,7 @@ html {
 
 body {
   overflow-x: hidden;
-  background: var(--farmly-paper);
+  background: var(--farmway-paper);
 }
 
 #root {
@@ -94,10 +94,10 @@ textarea:focus-visible {
 .page-shell,
 .onboarding-page,
 .dashboard-page {
-  animation: farmlyPageIn 700ms var(--farmly-ease) both;
+  animation: farmwayPageIn 700ms var(--farmway-ease) both;
 }
 
-@keyframes farmlyPageIn {
+@keyframes farmwayPageIn {
   from {
     opacity: 0;
     transform: translateY(14px);
@@ -117,7 +117,7 @@ textarea:focus-visible {
 .brand-mark,
 .landing-brand {
   transition:
-    transform 220ms var(--farmly-ease),
+    transform 220ms var(--farmway-ease),
     opacity 220ms ease;
 }
 
@@ -145,7 +145,7 @@ textarea:focus-visible {
 
   transition:
     color 200ms ease,
-    transform 200ms var(--farmly-ease);
+    transform 200ms var(--farmway-ease);
 }
 
 .topnav a::after {
@@ -161,13 +161,13 @@ textarea:focus-visible {
 
   border-radius: 999px;
 
-  background: var(--farmly-gold);
+  background: var(--farmway-gold);
 
   transform: scaleX(0);
   transform-origin: center;
 
   transition:
-    transform 240ms var(--farmly-ease);
+    transform 240ms var(--farmway-ease);
 }
 
 .topnav a:hover {
@@ -189,7 +189,7 @@ textarea:focus-visible {
   min-height: 44px;
 
   transition:
-    transform 180ms var(--farmly-ease),
+    transform 180ms var(--farmway-ease),
     box-shadow 180ms ease,
     background-color 180ms ease,
     border-color 180ms ease;
@@ -217,7 +217,7 @@ textarea:focus-visible {
   transform: translateX(-120%);
 
   transition:
-    transform 650ms var(--farmly-ease);
+    transform 650ms var(--farmway-ease);
 
   pointer-events: none;
 }
@@ -326,10 +326,10 @@ textarea:focus-visible {
   transform-origin: center;
 
   animation:
-    farmlyRoute 5s ease-in-out infinite alternate;
+    farmwayRoute 5s ease-in-out infinite alternate;
 }
 
-@keyframes farmlyRoute {
+@keyframes farmwayRoute {
   from {
     opacity: 0.42;
   }
@@ -350,10 +350,10 @@ textarea:focus-visible {
   transform-origin: center bottom;
 
   animation:
-    farmlyMarker 3s ease-in-out infinite;
+    farmwayMarker 3s ease-in-out infinite;
 }
 
-@keyframes farmlyMarker {
+@keyframes farmwayMarker {
   0%,
   100% {
     transform: translateY(0);
@@ -373,11 +373,11 @@ textarea:focus-visible {
 .map-offer-card,
 .market-offer-card {
   animation:
-    farmlyOfferFloat 4s ease-in-out infinite,
-    farmlyOfferGlow 4s ease-in-out infinite;
+    farmwayOfferFloat 4s ease-in-out infinite,
+    farmwayOfferGlow 4s ease-in-out infinite;
 }
 
-@keyframes farmlyOfferFloat {
+@keyframes farmwayOfferFloat {
   0%,
   100% {
     transform: translate3d(0, 0, 0);
@@ -388,7 +388,7 @@ textarea:focus-visible {
   }
 }
 
-@keyframes farmlyOfferGlow {
+@keyframes farmwayOfferGlow {
   0%,
   100% {
     box-shadow:
@@ -433,10 +433,10 @@ textarea:focus-visible {
     0 0 0 5px rgba(120, 213, 139, 0.1);
 
   animation:
-    farmlyPulse 1.8s ease-in-out infinite;
+    farmwayPulse 1.8s ease-in-out infinite;
 }
 
-@keyframes farmlyPulse {
+@keyframes farmwayPulse {
   0%,
   100% {
     transform: scale(0.85);
@@ -529,7 +529,7 @@ textarea:focus-visible {
   align-items: center;
 
   animation:
-    farmlyMarquee 24s linear infinite;
+    farmwayMarquee 24s linear infinite;
 
   will-change: transform;
 }
@@ -538,7 +538,7 @@ textarea:focus-visible {
   animation-play-state: paused;
 }
 
-@keyframes farmlyMarquee {
+@keyframes farmwayMarquee {
   from {
     transform: translateX(0);
   }
@@ -556,7 +556,7 @@ textarea:focus-visible {
 .rtl-marquee span {
   transition:
     opacity 180ms ease,
-    transform 180ms var(--farmly-ease);
+    transform 180ms var(--farmway-ease);
 }
 
 .rtl-marquee a:hover,
@@ -736,7 +736,7 @@ textarea:focus-visible {
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
 
   transition:
-    transform 260ms var(--farmly-ease),
+    transform 260ms var(--farmway-ease),
     box-shadow 260ms ease,
     border-color 260ms ease,
     background 260ms ease;
@@ -763,7 +763,7 @@ textarea:focus-visible {
     0 0 4px 4px;
 
   background:
-    var(--farmly-gold);
+    var(--farmway-gold);
 
   opacity: 0.9;
 }
@@ -798,7 +798,7 @@ textarea:focus-visible {
   pointer-events: none;
 
   transition:
-    transform 350ms var(--farmly-ease);
+    transform 350ms var(--farmway-ease);
 }
 
 
@@ -923,7 +923,7 @@ textarea:focus-visible {
   overflow: hidden;
 
   transition:
-    transform 260ms var(--farmly-ease),
+    transform 260ms var(--farmway-ease),
     box-shadow 260ms ease,
     background-color 260ms ease;
 }
@@ -947,14 +947,14 @@ textarea:focus-visible {
   pointer-events: none;
 
   transition:
-    transform 400ms var(--farmly-ease);
+    transform 400ms var(--farmway-ease);
 }
 
 .stats-grid .stat-card:hover {
   transform: translateY(-5px);
 
   box-shadow:
-    var(--farmly-shadow-md);
+    var(--farmway-shadow-md);
 }
 
 .stats-grid .stat-card:hover::after {
@@ -976,10 +976,10 @@ textarea:focus-visible {
   letter-spacing: -0.035em;
 
   animation:
-    farmlyNumberIn 800ms var(--farmly-ease) both;
+    farmwayNumberIn 800ms var(--farmway-ease) both;
 }
 
-@keyframes farmlyNumberIn {
+@keyframes farmwayNumberIn {
   from {
     opacity: 0;
 
@@ -1010,7 +1010,7 @@ textarea:focus-visible {
 .match-card,
 .price-row {
   transition:
-    transform 240ms var(--farmly-ease),
+    transform 240ms var(--farmway-ease),
     box-shadow 240ms ease,
     border-color 240ms ease;
 }
@@ -1025,7 +1025,7 @@ textarea:focus-visible {
   transform: translateY(-3px);
 
   box-shadow:
-    var(--farmly-shadow-md);
+    var(--farmway-shadow-md);
 }
 
 
@@ -1053,7 +1053,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color:
-    var(--farmly-green);
+    var(--farmway-green);
 
   box-shadow:
     0 0 0 4px rgba(23, 107, 69, 0.09);
@@ -1087,10 +1087,10 @@ textarea:focus {
     rgba(76, 175, 80, 0.08);
 
   animation:
-    farmlyAiOrb 6s ease-in-out infinite;
+    farmwayAiOrb 6s ease-in-out infinite;
 }
 
-@keyframes farmlyAiOrb {
+@keyframes farmwayAiOrb {
   0%,
   100% {
     transform: scale(0.9);
@@ -1110,10 +1110,10 @@ textarea:focus {
 .success-card,
 .status-success {
   animation:
-    farmlySuccessIn 500ms var(--farmly-ease) both;
+    farmwaySuccessIn 500ms var(--farmway-ease) both;
 }
 
-@keyframes farmlySuccessIn {
+@keyframes farmwaySuccessIn {
   from {
     opacity: 0;
 
@@ -1139,10 +1139,10 @@ textarea:focus {
 .toast,
 .notification-toast {
   animation:
-    farmlyToastIn 450ms var(--farmly-ease) both;
+    farmwayToastIn 450ms var(--farmway-ease) both;
 }
 
-@keyframes farmlyToastIn {
+@keyframes farmwayToastIn {
   from {
     opacity: 0;
 
@@ -1775,10 +1775,10 @@ textarea:focus {
   top: 1rem;
   z-index: 2;
   min-width: 11rem;
-  animation: farmlyFloat 4.5s ease-in-out infinite;
+  animation: farmwayFloat 4.5s ease-in-out infinite;
 }
 
-@keyframes farmlyFloat {
+@keyframes farmwayFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }

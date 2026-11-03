@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
-/** Original Farmly 3D market network (pre-farmer scene) */
+/** Original Farmway 3D market network (pre-farmer scene) */
 export default function InteractiveMarketScene() {
   const canvasRef = useRef(null)
 
