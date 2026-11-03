@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: farmerproject-web
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production

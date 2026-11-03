@@ -1880,6 +1880,108 @@ function LandingPage({ language, setLanguage, onLogin, onRegister, onExplore }) 
   )
 }
 
+function getApiBase() {
+  const envBase = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || 'http://farmly.in/api/v1'
+  return String(envBase).replace(/\/+$/, '')
+}
+
+function getApiUrl(path = 'users') {
+  const cleanPath = String(path || 'users').replace(/^\/+/, '')
+  return `${getApiBase()}/${cleanPath}`
+}
+
+function UsersPage() {
+  const [users, setUsers] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    let isMounted = true
+
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch(getApiUrl('users'), {
+          method: 'GET',
+          headers: {
+            Accept: 'application/json',
+          },
+        })
+
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`)
+        }
+
+        const payload = await response.json()
+        const result = Array.isArray(payload)
+          ? payload
+          : Array.isArray(payload.data)
+            ? payload.data
+            : Array.isArray(payload.users)
+              ? payload.users
+              : []
+
+        if (isMounted) {
+          setUsers(result)
+        }
+      } catch (requestError) {
+        if (isMounted) {
+          setError(requestError.message || 'Unable to fetch users')
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false)
+        }
+      }
+    }
+
+    fetchUsers()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  return (
+    <div className="page-shell">
+      <main style={{ maxWidth: 980, margin: '40px auto', padding: '0 20px' }}>
+        <div style={{ background: '#122d1d', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 20, padding: 24, color: '#fff' }}>
+          <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: '0.14em', color: '#d8c07a', fontSize: 12 }}>Farmly API Check</p>
+          <h1 style={{ margin: '12px 0 8px', fontSize: 34 }}>Users API</h1>
+          <p style={{ margin: 0, color: '#dfece4' }}>Calling: {getApiUrl('users')}</p>
+
+          {loading && <p style={{ marginTop: 20, color: '#dfece4' }}>Loading users...</p>}
+
+          {error && (
+            <div style={{ marginTop: 20, background: 'rgba(220, 53, 69, 0.12)', border: '1px solid rgba(220, 53, 69, 0.5)', borderRadius: 12, padding: 12 }}>
+              <strong style={{ color: '#ffb3b3' }}>Error:</strong> {error}
+            </div>
+          )}
+
+          {!loading && !error && users.length === 0 && (
+            <p style={{ marginTop: 20, color: '#dfece4' }}>No users returned from the API.</p>
+          )}
+
+          {!loading && !error && users.length > 0 && (
+            <div style={{ marginTop: 20, display: 'grid', gap: 12 }}>
+              {users.map((userItem, index) => (
+                <div key={userItem.id ?? `${userItem.name ?? 'user'}-${index}`} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: 16 }}>
+                  <strong style={{ display: 'block', fontSize: 18 }}>{userItem.name ?? userItem.username ?? `User ${index + 1}`}</strong>
+                  <div style={{ marginTop: 8, color: '#dfece4', lineHeight: 1.8 }}>
+                    {userItem.email && <div>Email: {userItem.email}</div>}
+                    {userItem.phone && <div>Phone: {userItem.phone}</div>}
+                    {userItem.role && <div>Role: {userItem.role}</div>}
+                    {userItem.status && <div>Status: {userItem.status}</div>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </main>
+    </div>
+  )
+}
+
 export default function App() {
   const [selectedRole, setSelectedRole] = useState(null)
   const [language, setLanguage] = useState('en')
@@ -1891,6 +1993,14 @@ export default function App() {
   const openLogin = () => setAuthMode('login')
   const openRegister = () => setAuthMode('register')
   const openExplore = () => setExploreOpen(true)
+
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/'
+  const isUsersRoute = currentPath === '/users' || currentPath.startsWith('/users/')
+  const isHealthRoute = currentPath === '/health' || currentPath.startsWith('/health/')
+
+  if (isUsersRoute || isHealthRoute) {
+    return <UsersPage />
+  }
 
   return (
     <div className="page-shell">
