@@ -1,10 +1,10 @@
-# Farmly — AI Context (simple)
+# Farmway — AI Context (simple)
 
 Short context for builders and agents. Keep this file light.
 
 ---
 
-## What is Farmly?
+## What is Farmway?
 
 A platform that helps farmers and FPOs decide:
 

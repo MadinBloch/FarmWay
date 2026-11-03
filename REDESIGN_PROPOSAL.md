@@ -1,4 +1,4 @@
-# Farmly Market-Linkage Platform — Redesign Proposal
+# Farmway Market-Linkage Platform — Redesign Proposal
 
 ## Overview
 Transform from a landing page into a role-based SaaS application (Farmer/FPO vs Buyer) with price discovery, lot management, and AI-powered matching, while extending the existing data-driven component pattern.

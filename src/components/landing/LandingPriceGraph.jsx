@@ -111,11 +111,11 @@ export default function LandingPriceGraph() {
       <div className="relative mt-3 overflow-hidden rounded-xl border border-white/8 bg-black/20 p-1.5">
         <svg className="h-auto w-full" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${data.label} price trend`}>
           <defs>
-            <linearGradient id="farmlyAreaTw" x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id="farmwayAreaTw" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#d4a017" stopOpacity="0.45" />
               <stop offset="100%" stopColor="#d4a017" stopOpacity="0" />
             </linearGradient>
-            <linearGradient id="farmlyStrokeTw" x1="0" y1="0" x2="1" y2="0">
+            <linearGradient id="farmwayStrokeTw" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stopColor="#5ecf8e" />
               <stop offset="100%" stopColor="#d4a017" />
             </linearGradient>
@@ -130,8 +130,8 @@ export default function LandingPriceGraph() {
               stroke="rgba(255,255,255,0.06)"
             />
           ))}
-          <path d={area} fill="url(#farmlyAreaTw)" />
-          <path d={line} fill="none" stroke="url(#farmlyStrokeTw)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d={area} fill="url(#farmwayAreaTw)" />
+          <path d={line} fill="none" stroke="url(#farmwayStrokeTw)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           {data.points.map((value, index) => {
             const x = 14 + (index / (data.points.length - 1)) * (width - 28)
             const y = 14 + (1 - (value - minP) / (maxP - minP || 1)) * (height - 28)

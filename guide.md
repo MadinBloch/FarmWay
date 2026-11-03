@@ -1,10 +1,10 @@
-# Farmly
+# Farmway
 
 ## Project Purpose
 
-**Farmly** is a digital platform designed to help farmers and FPOs find **better markets, suitable buyers, and better selling opportunities** for their agricultural produce.
+**Farmway** is a digital platform designed to help farmers and FPOs find **better markets, suitable buyers, and better selling opportunities** for their agricultural produce.
 
-The main purpose of Farmly is not just to show farmers the current market price, but to help them answer a more important question:
+The main purpose of Farmway is not just to show farmers the current market price, but to help them answer a more important question:
 
 > **“Based on my crop, quantity, quality, and location, where and to whom should I sell my produce?”**
 
@@ -23,7 +23,7 @@ Farmers often face difficulties while selling their produce:
 
 ## Our Solution
 
-**Farmly** brings market information, buyer requirements, produce details, location, quality, quantity, and logistics-related information together on one platform.
+**Farmway** brings market information, buyer requirements, produce details, location, quality, quantity, and logistics-related information together on one platform.
 
 The platform helps farmers compare different selling options and identify the option that can provide better **expected net realisation**.
 
@@ -31,7 +31,7 @@ The platform helps farmers compare different selling options and identify the op
 
 Suppose a farmer has **10 quintals of onions**.
 
-Farmly can help compare different options such as:
+Farmway can help compare different options such as:
 
 * Nearby mandi
 * Other markets
@@ -39,15 +39,15 @@ Farmly can help compare different options such as:
 * Processors
 * Institutional buyers
 
-Instead of looking only at the selling price, Farmly can consider factors such as transportation and storage costs to help the farmer identify the more suitable option.
+Instead of looking only at the selling price, Farmway can consider factors such as transportation and storage costs to help the farmer identify the more suitable option.
 
 ## Main Goal
 
-The main goal of Farmly is:
+The main goal of Farmway is:
 
 **Better Price Discovery + Better Buyer Access + Better Selling Decisions**
 
-Farmly aims to make the process of finding markets and buyers more transparent, informed, and convenient for farmers and FPOs.
+Farmway aims to make the process of finding markets and buyers more transparent, informed, and convenient for farmers and FPOs.
 
 ## Key Features
 
@@ -65,7 +65,7 @@ Farmly aims to make the process of finding markets and buyers more transparent, 
 
 ## FPO Support
 
-Farmly can also help FPOs aggregate produce from multiple farmers and create larger lots for buyers.
+Farmway can also help FPOs aggregate produce from multiple farmers and create larger lots for buyers.
 
 ```text
 Farmer 1 → 200 kg
@@ -84,13 +84,13 @@ This can help FPOs connect aggregated produce with buyers looking for larger qua
 
 ## In Simple Words
 
-**Farmly is not just a platform for checking market prices.**
+**Farmway is not just a platform for checking market prices.**
 
 It is being built to help farmers understand:
 
 > **“What is the best available selling option for my produce?”**
 
-The overall purpose of Farmly is to provide farmers and FPOs with **better market information, better buyer connections, and more informed selling decisions.**
+The overall purpose of Farmway is to provide farmers and FPOs with **better market information, better buyer connections, and more informed selling decisions.**
 
 ---
 

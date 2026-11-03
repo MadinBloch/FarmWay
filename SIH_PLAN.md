@@ -1,14 +1,14 @@
-# Farmly — SIH 2026 Build Plan
+# Farmway — SIH 2026 Build Plan
 
 **Problem ID:** SIH26132 — Strengthening market linkages and price discovery for farmers  
 **Organization:** Government of Maharashtra / MSInS  
-**Product:** Farmly   
+**Product:** Farmway   
 
 ---
 
 ## 1. One-line pitch
 
-Farmly helps farmers and FPOs answer: **“Based on my crop, quantity, quality, and location, where and to whom should I sell for the best expected net realisation?”**
+Farmway helps farmers and FPOs answer: **“Based on my crop, quantity, quality, and location, where and to whom should I sell for the best expected net realisation?”**
 
 Not just mandi rates — **price discovery + verified buyer match + logistics + payment trust + AI advice**.
 
@@ -61,7 +61,7 @@ React (Vite)  ──REST/WS──►  FastAPI (Python)
 | Backend | **Python FastAPI** | Own APIs, JWT auth |
 | DB | PostgreSQL (Docker) | Replace Supabase |
 | ML | sklearn / Prophet | Price trend + sale window |
-| Chat | RAG over Farmly docs + live prices | Marathi/Hindi/English |
+| Chat | RAG over Farmway docs + live prices | Marathi/Hindi/English |
 | Voice | Whisper STT + TTS | Mic → same chat brain |
 | Charts | 2D bars + **3D market surface** | Demo wow |
 
